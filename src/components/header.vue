@@ -72,6 +72,15 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100px;
+
+    .main-logo{
+        padding: 7.5px;
+        img{
+            width: 75px;
+        }
+        
+    }
 
     ul{
         display: flex;
@@ -84,8 +93,9 @@ ul{
             font-size: 0.85rem;
             font-weight: 600;
             color: black;
+            line-height: 100px;
         }
-        
+
         .active{
             border-bottom: 4px solid $mainBlueColor;
             a{

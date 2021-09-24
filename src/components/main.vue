@@ -3,12 +3,18 @@
         <section id="main-content">
             <h3>-- -- Content goes here -- -- </h3>
         </section>
+        <ShopSection />
     </main>
 </template>
 
 <script>
+import ShopSection from './shop.vue'
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components : {
+        ShopSection
+    }
 }
 </script>
 

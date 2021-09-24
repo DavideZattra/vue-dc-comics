@@ -120,7 +120,11 @@
                 </div>
             </nav>
 
-            <img src="../assets/img/dc-logo-bg.png" alt="Big Dc Logo">
+            <div>
+
+                <img src="../assets/img/dc-logo-bg.png" alt="Big Dc Logo">
+
+            </div>
 
         </section>
 
@@ -190,7 +194,8 @@ ul{
     nav{
         display: flex;
         align-content: center;
-
+        flex-basis: 30%;
+        padding-left: 20px;
         .col{
             padding: 10px;
 
@@ -207,6 +212,19 @@ ul{
         
     }
     
+    div{
+        height: 350px;
+        position: relative;
+        flex-basis: 50%;
+
+        img{
+            position: absolute;
+            width: 90%;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 #lower-footer{

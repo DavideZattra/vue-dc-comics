@@ -1,7 +1,7 @@
 <template>
     <main>
         <section id="main-content">
-            <h3>Content goes here</h3>
+            <h3>-- -- Content goes here -- -- </h3>
         </section>
     </main>
 </template>

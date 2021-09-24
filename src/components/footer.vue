@@ -160,12 +160,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/general.scss';
+@import '../style/variables.scss';
+
     ul{
         list-style: none;
 
         li>a{
             text-decoration: none;
-            color: #c8cdce;
+            color: $linkColor;
         }
     }
 
@@ -176,7 +179,7 @@ export default {
     #upper-footer{
         background-image: url(../assets/img/footer-bg.jpg);
         background-repeat: no-repeat;
-        
+
     }
 
 </style>

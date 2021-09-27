@@ -10,37 +10,10 @@
 
                 <ul>
 
-                    <li>
-                        <a href="#">Characters</a>
+                    <li v-for="(element, index) in selectors " :key="index">
+                        <a :class="{ active : element.current }" href="#"> {{ element.name }} </a>
                     </li>
-                    <li class="active">
-                        <a href="#">Comics</a>
-                    </li>
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">tv</a>
-                    </li>
-                    <li>
-                        <a href="#">games</a>
-                    </li>
-                    <li>
-                        <a href="#">collectibles</a>
-                    </li>
-                    <li>
-                        <a href="#">videos</a>
-                    </li>
-                    <li>
-                        <a href="#">fans</a>
-                    </li>
-                    <li>
-                        <a href="#">news</a>
-                    </li>
-                    <li>
-                        <a href="#">shop</a>
-                    </li>
-
+                    
                 </ul>
 
 
@@ -51,7 +24,66 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    data : function(){
+
+        return {
+            selectors : [
+                {
+                    name: 'characters',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'comics',
+                    url : '#',
+                    current : true
+                },
+                {
+                    name: 'movies',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'tv',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'games',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'collectibles',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'videos',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'fans',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'news',
+                    url : '#',
+                    current : false
+                },
+                {
+                    name: 'shop',
+                    url : '#',
+                    current : false
+                },
+            ]
+
+        }
+        
+    }
 }
 </script>
 
@@ -89,6 +121,9 @@ ul{
         height: 100%;
 
         a{
+            display: inline-block;
+            height: 100px;
+            line-height: 100px;
             text-transform: uppercase;
             font-size: 0.85rem;
             font-weight: 600;
@@ -96,11 +131,9 @@ ul{
             line-height: 100px;
         }
 
-        .active{
+        a.active{
             border-bottom: 4px solid $mainBlueColor;
-            a{
-                color: $mainBlueColor;
-            }
+            color: $mainBlueColor;
         }
     }
 }
